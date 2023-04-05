@@ -338,18 +338,6 @@ PING
 }
 ```
 
-UPDATE
-```json
-{
-    "operation": "update",
-    "tableName": "lambda-apigateway",
-    "payload": {
-        "Key": {
-            "id": "1234ABCD"
-        }
-    }
-}
-```
 We have successfully created a serverless API using API Gateway, Lambda, and DynamoDB!
 
 ## Cleanup
