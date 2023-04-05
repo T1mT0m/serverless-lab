@@ -281,39 +281,75 @@ In this step, you deploy the API that you created to a stage called prod.
 ```
 ![List Dynamo Items](./images/dynamo-item-list.jpg)
 
+READ
 ```json
 {
-    "operation": "list",
+    "operation": "read",
     "tableName": "lambda-apigateway",
     "payload": {
-    }
-}
-```
-```json
-{
-    "operation": "list",
-    "tableName": "lambda-apigateway",
-    "payload": {
-    }
-}
-```
-```json
-{
-    "operation": "list",
-    "tableName": "lambda-apigateway",
-    "payload": {
-    }
-}
-```
-```json
-{
-    "operation": "list",
-    "tableName": "lambda-apigateway",
-    "payload": {
+        "Key": {
+            "id": "1234ABCD"
+        }
     }
 }
 ```
 
+DELETE
+```json
+{
+    "operation": "delete",
+    "tableName": "lambda-apigateway",
+    "payload": {
+        "Key": {
+            "id": "1234ABCD"
+        }
+    }
+}
+```
+
+ECHO
+
+```json
+{
+    "operation": "echo",
+    "tableName": "lambda-apigateway",
+    "payload": {
+        "Item": {
+            "id": "5678DABC",
+            "number": 8,
+            "name": "XHSSO"
+        }
+    }
+}
+```
+
+PING
+```json
+{
+    "operation": "ping",
+    "tableName": "lambda-apigateway",
+    "payload": {
+        "Item": {
+            "id": "123",
+            "number": 8,
+            "name": "abs"
+        }
+    }
+}
+```
+
+UPDATE
+```json
+{
+    "operation": "update",
+    "tableName": "lambda-apigateway",
+    "payload": {
+        "Key": {
+            "id": "1234ABCD"
+        }
+    }
+}
+```
 We have successfully created a serverless API using API Gateway, Lambda, and DynamoDB!
 
 ## Cleanup
